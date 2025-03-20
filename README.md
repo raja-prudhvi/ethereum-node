@@ -139,18 +139,10 @@ spec:
   type: NodePort
 EOF
 
-# Apply configurations to Minikube
-kubectl apply -f secret.yaml
-kubectl apply -f nethermind-pvc.yaml
-kubectl apply -f nethermind-deployment.yaml
-kubectl apply -f nethermind-service.yaml
 
-# Display status
-kubectl get all
-echo "Nethermind Service URL:"
-minikube service nethermind --url
+chmod +x nethermind.sh    
+./nethermind.sh
 
-echo "Execution Layer deployment complete!"
 ```
 
 ##### Consensus Layer Deployment (Prysm)
@@ -260,21 +252,12 @@ spec:
   type: NodePort
 EOF
 
-# Apply configurations to Minikube
-kubectl apply -f prysm-pvc.yaml
-kubectl apply -f prysm-deployment.yaml
-kubectl apply -f prysm-service.yaml
+chmod +x prysm.sh
+./prysm.sh
 
-# Display status
-kubectl get all
-echo "Prysm Service URL:"
-minikube service prysm --url
-
-echo "Consensus Layer deployment complete!"
 ```
 
 #### Objective 2: Provide a Postman Collection
-Below are the top 10 functional RPC endpoints for the deployed Ethereum PoS client (Nethermind). These can be imported into a Postman Collection.
 
 ##### 1. Get Client Version
 ```bash
