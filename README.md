@@ -2,7 +2,7 @@
 ### Ethereum Node Setup and Configuration
 
 #### Objective 1: Set up an Ethereum Proof of Stake (PoS) Client
-The provided bash scripts deploy Nethermind (Execution Layer) and Prysm (Consensus Layer) on Minikube using Kubernetes. Below are the corrected and formatted scripts:
+The provided bash scripts deploy Nethermind (Execution Layer) and Prysm (Consensus Layer) on Minikube using Kubernetes.
 
 ##### Execution Layer Deployment (Nethermind)
 ```bash
